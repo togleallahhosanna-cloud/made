@@ -32,6 +32,15 @@ btnWhatsApp.innerHTML = '💬';
 btnWhatsApp.style.cssText = 'position:fixed; bottom:20px; right:20px; background:#25D366; color:white; width:60px; height:60px; border-radius:50%; text-align:center; font-size:30px; box-shadow:2px 2px 8px rgba(0,0,0,0.3); z-index:9999; display:flex; align-items:center; justify-content:center; text-decoration:none;';
 document.body.appendChild(btnWhatsApp);
 </script>
+
+  <script>
+document.querySelectorAll('a[href*="wa.me"]').forEach(function(lien) {
+    let url = new URL(lien.href);
+    let text = url.searchParams.get('text') || 'Salut%20Made%20in%20Sahel%2C%20la%20fiert%C3%A9%20de%20nos%20mains.%20Je%20suis%20int%C3%A9ress%C3%A9%20par%20l%E2%80%99un%20de%20vos%20produits%20artisanaux%20via%20votre%20site%20web%20et%20je%20souhaite%20commander.';
+    lien.href = 'https://wa.me/237653034593?text=' + text;
+});
+</script>
+  
 body{background:var(--earth);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden}
 
 /* WA FLOAT */
